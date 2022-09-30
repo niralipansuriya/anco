@@ -1,0 +1,224 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    signingConfigs {
+        debug {
+           storeFile file('/home/android/Nirali/Keystore/Anco/ancoturf.jks')
+//            storeFile file('/Users/tristatetechnology/Jaypal/AWSRepository/anco-turf-Android/Keystore/Anco/ancoturf.jks')
+            storePassword 'anco001'
+            keyAlias 'ancoturf'
+            keyPassword 'anco001'
+        }
+        release {
+            storeFile file('/home/android/Nirali/Keystore/Anco/ancoturf.jks')
+//            storeFile file('/Users/tristatetechnology/Jaypal/AWSRepository/anco-turf-Android/Keystore/Anco/ancoturf.jks')
+            storePassword 'anco001'
+            keyAlias 'ancoturf'
+            keyPassword 'anco001'
+        }
+    }
+    //compileSdkVersion 29
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.app.ancoturf"
+        minSdkVersion 21
+        //targetSdkVersion 29
+        targetSdkVersion 30
+        versionCode 40
+        versionName "1.44"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField 'int', 'DATABASE_VERSION', '1'
+        buildConfigField 'String', 'DATABASE_NAME', '"anco_database"'
+        buildConfigField "String", "DATE_VALIDATION_API_URL", '"http://www.ancoturf.sharptest.com.au/"'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        /*debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }*/
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    sourceSets {
+//        main {
+//            res.srcDirs = [
+//                    'src/main/res',
+//                    'src/main/res/item_tags',
+//            ]
+//        }
+//    }
+
+/*
+    adb Huawei P8 Lite shell setprop debug.firebase.analytics.app com.app.ancoturf
+*/
+
+    flavorDimensions "environment"
+    productFlavors {
+        dev {
+            dimension "environment"
+//            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "AncoTurf"
+            resValue "string", "share_url", "http://anco.anasource.com:90/share"
+            resValue "string", "payment_terms_conditions", '"http://www.mocky.io/v2/5d5e1efe3300000d0057bc41"'
+            buildConfigField 'String', 'API_BASE_URL', '"http://anco.anasource.com/"'
+            buildConfigField "String", "AFTERPAY_API_URL", '"https://api-sandbox.afterpay.com/v1/"'
+            buildConfigField "String", "AFTERPAY_USER", '"40196"'
+            buildConfigField "String", "AFTERPAY_USER_PASSWORD", '"759013238de4e1f9a5aaf48279f6f244695618ee5716ec727875abccbb1df82a84a81e11e50048369dc44b514a3c7992dacdb668514aab3f4692849a1f1b5e91"'
+            buildConfigField "String", "AFTERPAY_CHECKOUT_URL", '"https://portal-sandbox.afterpay.com/au/checkout/?token=%s&relativeCallbackUrl=%s"'
+        }
+        staging {
+            dimension "environment"
+//            applicationIdSuffix ".staging"
+            resValue "string", "app_name", "AncoTurf"
+            resValue "string", "share_url", "http://anco.anasource.com:90/share"
+            resValue "string", "payment_terms_conditions", '"http://www.mocky.io/v2/5d5e1efe3300000d0057bc41"'
+            buildConfigField "String", "AFTERPAY_API_URL", '"https://api-sandbox.afterpay.com/v1/"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://ancob2b.sharptest.com.au/"'  //staging
+            buildConfigField "String", "AFTERPAY_USER", '"40196"'
+            buildConfigField "String", "AFTERPAY_USER_PASSWORD", '"759013238de4e1f9a5aaf48279f6f244695618ee5716ec727875abccbb1df82a84a81e11e50048369dc44b514a3c7992dacdb668514aab3f4692849a1f1b5e91"'
+            buildConfigField "String", "AFTERPAY_CHECKOUT_URL", '"https://portal-sandbox.afterpay.com/au/checkout/?token=%s&relativeCallbackUrl=%s"'
+        }
+        preProduction {
+            dimension "environment"
+//            applicationIdSuffix ".preproduction"
+            resValue "string", "app_name", "AncoTurf"
+            resValue "string", "share_url", "http://anco.anasource.com:90/share"
+            resValue "string", "payment_terms_conditions", '"http://www.mocky.io/v2/5d5e1efe3300000d0057bc41"'
+            buildConfigField "String", "AFTERPAY_API_URL", '"https://api.afterpay.com/v1/"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://backend.ancoapp.com.au/"' //nnn 18/09/2020
+            buildConfigField "String", "AFTERPAY_USER", '"72832"'
+            buildConfigField "String", "AFTERPAY_USER_PASSWORD", '"d5c03b2f750f7989c124278c2e16ea5d232b9edfd21a24cb5a98656513ccc99645489d0b1100a3be8e43b8515181e59a95aaf920646cf11f90ab5dfb664a2148"'
+            buildConfigField "String", "AFTERPAY_CHECKOUT_URL", '"https://portal.afterpay.com/au/checkout/?token=%s&relativeCallbackUrl=%s"'
+        }
+        production {
+            dimension "environment"
+            resValue "string", "app_name", "AncoTurf"
+            resValue "string", "share_url", "http://anco.anasource.com:90/share"
+            resValue "string", "payment_terms_conditions", '"http://www.mocky.io/v2/5d5e1efe3300000d0057bc41"'
+            buildConfigField "String", "AFTERPAY_API_URL", '"https://api.afterpay.com/v1/"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://backend.ancoapp.com.au/"'  //nnn 18/09/2020
+            buildConfigField "String", "AFTERPAY_USER", '"72832"'
+            buildConfigField "String", "AFTERPAY_USER_PASSWORD", '"d5c03b2f750f7989c124278c2e16ea5d232b9edfd21a24cb5a98656513ccc99645489d0b1100a3be8e43b8515181e59a95aaf920646cf11f90ab5dfb664a2148"'
+            buildConfigField "String", "AFTERPAY_CHECKOUT_URL", '"https://portal.afterpay.com/au/checkout/?token=%s&relativeCallbackUrl=%s"'
+        }
+    }
+
+
+    dataBinding {
+        enabled true
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://s3-ap-southeast-1.amazonaws.com/jp-build-packages/ec-android-sdk'
+    }
+    maven {
+        url 'https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    // Android X
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+    debugImplementation "androidx.test:runner:$test_runner_version"
+    testImplementation "junit:junit:$junit_version"
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    // Rx
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
+    // Dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_version"
+    //material design
+    implementation "com.google.android.material:material:$material_design"
+    // Location
+    implementation "com.google.android.gms:play-services-location:$playservice_location_version"
+    implementation "com.google.android.gms:play-services-maps:$playservice_map_version"
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    //dimension
+    implementation "com.intuit.sdp:sdp-android:1.0.6"
+    implementation "com.intuit.ssp:ssp-android:1.0.6"
+    //Gson
+    implementation "com.google.code.gson:gson:$gson_version"
+    // permission
+    implementation 'com.karumi:dexter:5.0.0'
+    //youtube player
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.21'
+    implementation project(':materialrangebar')
+    //custom calandar
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.2'
+    //deeplinking firebasae
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    //firebase push notification
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
+    // Lifecycles only (no ViewModel or LiveData)
+    implementation "android.arch.lifecycle:runtime:1.1.1"
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    //monthyearpicker
+    implementation 'com.whiteelephant:monthandyearpicker:1.3.0'
+    //pdfviewer
+    implementation 'es.voghdev.pdfviewpager:library:1.0.5'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
+    implementation 'com.facebook.fresco:fresco:2.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.0'
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    implementation 'com.google.firebase:firebase-analytics-ktx:19.0.0'
+    implementation 'com.facebook.android:facebook-marketing:[4,5)'
+//    implementation "com.github.barteksc:android-pdf-viewer:2.8.2"
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

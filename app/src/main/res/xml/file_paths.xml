@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Based on default Glide operation, see InternalCacheDiskCacheFactory instantiated from GlideBuilder.createGlide() -->
+<paths>
+    <cache-path xmlns:tools="http://schemas.android.com/tools"
+            name="share"
+            path="image_manager_disk_cache"
+            tools:path="DiskCache.Factory.DEFAULT_DISK_CACHE_DIR" />
+
+    <external-files-path
+            name="external-files"
+            path="Pictures/" />
+
+    <cache-path
+            name="cache-files"
+            path="Pictures/" />
+
+    <files-path
+            name="files"
+            path="Pictures/" />
+</paths>

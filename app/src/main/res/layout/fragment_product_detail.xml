@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@+id/txtProductCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProductTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_22sdp"
+        app:layout_constraintEnd_toStartOf="@+id/imgShare"
+        app:layout_constraintStart_toEndOf="@id/imgBack"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:text="Sir Walter DNA\nCertified" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProductCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintStart_toStartOf="@+id/imgBack"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductTitle"
+        tools:text="Turf" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toTopOf="@+id/txtProductCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductCategory" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/homeItemPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@+id/linReviewContainer" />
+
+            <LinearLayout
+                android:id="@+id/linReviewContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_grey_line_rounded_corner"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10sdp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/ratingbar_selector"
+                    android:rating="2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toEndOf="@+id/homeItemPager"
+                    tools:text="@string/number_of_reviews" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCustomerReviewLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center"
+                    android:text="@string/customer_nreviews"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/homeItemPager" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="center"
+                android:textColor="@color/theme_green"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/edtQuantity"
+                app:layout_constraintStart_toStartOf="@+id/txtUnit"
+                app:layout_constraintTop_toBottomOf="@+id/homeItemPager"
+                tools:text="$13.75 / m" />
+
+            <com.app.ancoturf.utils.customeview.pagerindicator.CirclePageIndicator
+                android:id="@+id/homeItemIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/_10sdp"
+                android:visibility="visible"
+                app:fillColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrice"
+                app:pageColor="#D8D8D8"
+                app:radius="@dimen/_3sdp"
+                app:strokeColor="#000000"
+                app:strokeWidth="0dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/edtQuantity"
+                app:layout_constraintEnd_toStartOf="@+id/edtQuantity"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeItemIndicator"
+                tools:text="m" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_quantity_box"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:singleLine="true"
+                android:textColor="@color/txt_grey"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtUnit"
+                app:layout_constraintTop_toBottomOf="@+id/homeItemIndicator"
+                tools:text="1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtCalculationLabel"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="center"
+                android:text="@string/calculation_label_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toBottomOf="@+id/edtQuantity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_light_grey_rounded"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="center"
+                android:paddingStart="@dimen/_24sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_24sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCalculationLabel"
+                tools:text="@string/qty_total" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/bg_green_rounded_corner"
+                android:fontFamily="@font/sf_pro_text_semibold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/add_to_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtOutOfStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_semibold"
+                android:gravity="center"
+                android:text="Out of Stock. Please call our office 1800 010 110"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddToCart" />
+
+            <!--<androidx.appcompat.widget.AppCompatTextView-->
+            <!--android:id="@+id/txtShareLAbel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/share"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txtAddToCart"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/imgFb"-->
+            <!--android:fontFamily="@font/sf_pro_display_regular"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/imgFb"-->
+            <!--app:layout_constraintHorizontal_chainStyle="packed"-->
+            <!--android:textSize="@dimen/_14ssp"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:gravity="center"/>-->
+
+            <!--<androidx.appcompat.widget.AppCompatImageView-->
+            <!--android:id="@+id/imgFb"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txtAddToCart"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/txtShareLAbel"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/imgTwitter"-->
+            <!--app:layout_constraintBottom_toBottomOf="@id/txtShareLAbel"-->
+            <!--android:layout_marginStart="@dimen/_8sdp"-->
+            <!--android:src="@drawable/img_facebook"/>-->
+
+            <!--<androidx.appcompat.widget.AppCompatImageView-->
+            <!--android:id="@+id/imgTwitter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txtAddToCart"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/imgFb"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/imgGoogle"-->
+            <!--app:layout_constraintBottom_toBottomOf="@id/txtShareLAbel"-->
+            <!--android:layout_marginStart="@dimen/_8sdp"-->
+            <!--android:src="@drawable/img_twitter"/>-->
+
+            <!--<androidx.appcompat.widget.AppCompatImageView-->
+            <!--android:id="@+id/imgGoogle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txtAddToCart"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/imgTwitter"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/imgTumbler"-->
+            <!--app:layout_constraintBottom_toBottomOf="@id/txtShareLAbel"-->
+            <!--android:layout_marginStart="@dimen/_8sdp"-->
+            <!--android:src="@drawable/img_google"/>-->
+
+            <!--<androidx.appcompat.widget.AppCompatImageView-->
+            <!--android:id="@+id/imgTumbler"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txtAddToCart"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/imgGoogle"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintBottom_toBottomOf="@id/txtShareLAbel"-->
+            <!--android:layout_marginStart="@dimen/_8sdp"-->
+            <!--android:src="@drawable/img_tumblr"/>-->
+
+            <LinearLayout
+                android:id="@+id/linContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/txtOutOfStock">
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/csFree"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linContainer"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFreeLabel"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/free"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:drawableEnd="@drawable/ic_down_arrow"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/sf_pro_text_bold"/>
+
+                <include
+                    android:layout_width="@dimen/_130sdp"
+                    app:layout_constraintTop_toBottomOf="@id/txtFreeLabel"
+                    android:id="@+id/layItemProduct"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    layout="@layout/item_product"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtNoFreeProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    android:text="@string/no_free_product_available"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layItemProduct"
+                    />
+                <View
+                    android:id="@+id/lineFree"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#B6B6B6"
+                    app:layout_goneMarginTop="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtNoFreeProduct"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtRelatedItemLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:text="@string/related_items"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csFree" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtShowAllRelated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:drawableEnd="@drawable/ic_fw_arrow"
+                android:drawablePadding="@dimen/_2sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:text="@string/show_all"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csFree" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listRelatedProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                    app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/txtRelatedItemLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:tools="http://schemas.android.com/tools"
+        android:padding="@dimen/_8sdp">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_180sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+            android:background="@drawable/img_portfolio_place_holder">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="@id/mainLayout"
+                app:layout_constraintEnd_toEndOf="@id/mainLayout"
+                app:layout_constraintTop_toTopOf="@id/mainLayout"
+                app:layout_constraintBottom_toBottomOf="@id/mainLayout"/>
+
+            <View
+                    android:id="@+id/overlayView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/container"
+                    app:layout_constraintBottom_toBottomOf="@+id/container"
+                    android:background="@drawable/bg_offer_overlay"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPortfolioTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/txtTotalItems"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        android:textSize="@dimen/_32ssp"
+                        tools:text="Latest\nOffer"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTotalItems"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtPortfolioTitle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/sf_pro_text_regular"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="@string/items"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

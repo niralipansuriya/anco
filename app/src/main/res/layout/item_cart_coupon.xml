@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content">
+
+  <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/imgCouponDelete"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:src="@drawable/ic_close_dialog"
+          android:padding="@dimen/_2sdp"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtCouponCode"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/imgCouponDelete"
+          tools:text="Sir "
+          android:textColor="@android:color/black"
+          android:fontFamily="@font/sf_pro_display_bold"
+          android:textSize="@dimen/_14ssp"
+          app:layout_constraintHorizontal_bias="0"
+          android:gravity="center_vertical"
+          android:layout_marginStart="@dimen/_6sdp"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtCouponName"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/txtCouponCode"
+          app:layout_constraintStart_toStartOf="parent"
+          tools:text="Sir fvgdf "
+          android:textColor="@android:color/black"
+          android:fontFamily="@font/sf_pro_display_regular"
+          android:textSize="@dimen/_12ssp"
+          app:layout_constraintHorizontal_bias="0"
+          android:gravity="center_vertical"
+          android:layout_marginStart="@dimen/_6sdp"
+          android:layout_marginTop="@dimen/_4sdp"
+          app:layout_constraintEnd_toStartOf="@+id/imgCouponDelete"/>
+
+  <View
+          android:id="@+id/view"
+          android:layout_width="match_parent"
+          android:layout_height="2px"
+          android:background="@color/grey"
+          android:layout_marginTop="@dimen/_4sdp"
+          app:layout_constraintTop_toBottomOf="@+id/txtCouponName"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

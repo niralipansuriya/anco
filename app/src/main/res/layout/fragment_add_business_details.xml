@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/header"
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toTopOf="@+id/txtSubTitle"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="@dimen/_8sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgBack"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:text="@string/business_details"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_22sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:layout_marginStart="@dimen/_8sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        android:text="@string/quote_label"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13sdp"
+        android:fontFamily="@font/sf_pro_text_bold"
+        android:layout_marginStart="@dimen/_8sdp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubTitle"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/listProducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_36sdp"
+            android:background="@drawable/bg_quotes">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBusinessInfoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/business_information"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/sf_pro_text_bold"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/txtBusinessInfoLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/txtBusinessInfoLabel"
+                app:layout_constraintStart_toEndOf="@+id/txtBusinessInfoLabel"
+                android:src="@drawable/ic_edit_small"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_8sdp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtContactNameLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtBusinessInfoLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/contact_name_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtBusinessInfoLabel"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Rechard"
+                android:hint="@string/contact_name_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="textPersonName"
+                android:background="@null"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBusinessNameLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtContactName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/business_name_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtBusinessName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtContactName"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="ABC Landscaping"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="@string/business_name_quote_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAddressLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtBusinessName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/address_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtBusinessName"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="15 New Street, Brighton 3186"
+                android:background="@null"
+                android:hint="@string/address_quote_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEmailLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/email_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtAddress"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="chard@abdlandscaping.com.au"
+                android:background="@null"
+                android:hint="@string/email_quote_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMobileNumLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/mobile_number_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtMobileNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="0400 000 000"
+                android:background="@null"
+                android:hint="@string/mobile_number_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPhoneLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtMobileNum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/phone_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtMobileNum"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="03 0000 0000"
+                android:background="@null"
+                android:hint="@string/phone_number_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAbnLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtPhone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/abn_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtAbn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtPhone"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="03 0000 0000"
+                android:background="@null"
+                android:hint="@string/abn_quote_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:singleLine="true"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtWebLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtAbn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/web_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtAbn"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="abclandscaping.com.au"
+                android:background="@null"
+                android:hint="@string/web_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_6sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPaymentTermsLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtWeb"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/payment_terms_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPaymentTerms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtWeb"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="The payment terms will be 50% to start work and 50% on completion."
+                android:background="@null"
+                android:hint="@string/payment_terms_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDisclaimerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtPaymentTerms"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/disclaimer_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtDisclaimer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtPaymentTerms"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Subject to change pending product availability"
+                android:background="@null"
+                android:hint="@string/disclaimer_hint"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtCheckGSTLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtDisclaimer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guide"
+                android:text="@string/check_gst_label"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCheckGST"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtDisclaimer"
+                app:layout_constraintBottom_toBottomOf="@+id/txtCheckGSTLabel"
+                app:layout_constraintStart_toEndOf="@+id/guide"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@drawable/ic_checkbox_h"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_quote_photo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCheckGSTLabel"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:padding="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgBusinessLogo"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/img_place_holder"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAddLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/imgBusinessLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/add_logo"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11ssp"
+                    android:background="@drawable/bg_green_line_rounded"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/sf_pro_text_bold"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtImgName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/imgBusinessLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAddLogo"
+                    android:text="200x200px .jpg .png"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginStart="@dimen/_4sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSubmitBusinessDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAddImage"
+                android:text="@string/sumit_quote"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12ssp"
+                android:background="@drawable/bg_green_rounded"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:layout_marginStart="@dimen/_8sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

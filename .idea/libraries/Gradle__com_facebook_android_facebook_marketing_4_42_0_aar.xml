@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="Gradle: com.facebook.android:facebook-marketing:4.42.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be8697dad9d819fd149eb49367a3631/jetified-facebook-marketing-4.42.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be8697dad9d819fd149eb49367a3631/jetified-facebook-marketing-4.42.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be8697dad9d819fd149eb49367a3631/jetified-facebook-marketing-4.42.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5104b9e2313bef05fb0c00c4a4e5a577/jetified-facebook-marketing-4.42.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5104b9e2313bef05fb0c00c4a4e5a577/jetified-facebook-marketing-4.42.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5104b9e2313bef05fb0c00c4a4e5a577/jetified-facebook-marketing-4.42.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c43937bbd114829167fb4e4ba38d8511/jetified-facebook-marketing-4.42.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c43937bbd114829167fb4e4ba38d8511/jetified-facebook-marketing-4.42.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c43937bbd114829167fb4e4ba38d8511/jetified-facebook-marketing-4.42.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/19bf932ae103e2ab514c5794d4fb2d56/jetified-facebook-marketing-4.42.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/19bf932ae103e2ab514c5794d4fb2d56/jetified-facebook-marketing-4.42.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/19bf932ae103e2ab514c5794d4fb2d56/jetified-facebook-marketing-4.42.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/10c2b6b1abd95cdc4973dd3036405f61/jetified-facebook-marketing-4.42.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/10c2b6b1abd95cdc4973dd3036405f61/jetified-facebook-marketing-4.42.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-marketing/4.42.0/ff86b163020a3ad438019d8ad76c0c534b90896d/facebook-marketing-4.42.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-marketing/4.42.0/cc29d82c52757548397678c59aff9bff804eb4eb/facebook-marketing-4.42.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

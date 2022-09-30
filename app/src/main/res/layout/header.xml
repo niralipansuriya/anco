@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/img_logo_green"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_more"
+    />
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgMore"
+            android:src="@drawable/ic_search"
+            android:layout_marginEnd="@dimen/_8sdp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgSearch"
+            android:src="@drawable/ic_add_cart"
+            android:layout_marginEnd="@dimen/_8sdp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBell"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgCart"
+            android:src="@drawable/ic_bell_simple"
+            android:layout_marginEnd="@dimen/_8sdp"
+    />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCartProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/imgCart"
+            app:layout_constraintEnd_toEndOf="@+id/imgCart"
+            app:layout_constraintTop_toTopOf="@+id/imgCart"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCart"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            tools:text="99"
+            android:gravity="center"
+            android:textSize="@dimen/_8ssp"
+            app:fontFamily="@font/sf_pro_text_bold"
+            android:textColor="@color/theme_green"/>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#B6B6B6"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

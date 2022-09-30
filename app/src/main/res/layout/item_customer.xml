@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sf_pro_text_bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgSelection"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12ssp"
+            tools:text="Kyle H. Ferrel"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCustomerAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCustomerName"
+            app:layout_constraintEnd_toStartOf="@+id/imgSelection"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12ssp"
+            tools:text="15 New Street, Brighton 3186"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCustomerEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCustomerAddress"
+            app:layout_constraintEnd_toStartOf="@+id/imgSelection"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12ssp"
+            tools:text="abclandscaping.com"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            android:src="@drawable/ic_tick"/>
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/grey"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCustomerEmail"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

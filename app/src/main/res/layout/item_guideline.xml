@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivGuide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        android:layout_width="match_parent"
+        android:src="@drawable/anco___onboarding___portfolio_01"
+        android:layout_height="0dp"/>
+<!--
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubtitle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_medium"
+        app:layout_constraintTop_toBottomOf="@id/ivGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Share portfolio"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_18ssp"
+        />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:gravity="bottom|center"
+        android:fontFamily="@font/sf_pro_text_regular"
+        app:layout_constraintTop_toBottomOf="@id/ivGuide"
+        app:layout_constraintBottom_toTopOf="@id/csButtonGrp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Easily share your previous work with a web page gallery"
+        android:textColor="@color/rangebar_tick_color"
+        android:textSize="@dimen/_14ssp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csButtonGrp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnChoosingMyLawn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/choosing_my_lawn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnManagingMyLawn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnManagingMyLawn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/managing_nmy_lawn"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/btnChoosingMyLawn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnTrackMyDelivery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/track_my_delivery_n"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/btnChoosingMyLawn"
+            app:layout_constraintEnd_toStartOf="@id/btnReturningCustomer"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnTrackMyDeliveryNoLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/track_my_delivery_n"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/btnChoosingMyLawn"
+            app:layout_constraintEnd_toStartOf="@id/btnBrowseOurShopNoLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnBrowseOurShopNoLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/browse_our_shop"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/btnTrackMyDeliveryNoLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnTrackMyDeliveryNoLogin"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnReturningCustomer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/returning_customer"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/btnTrackMyDelivery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnTrackMyDelivery"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnNewTradeCustomers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/new_trade_customers"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/btnTrackMyDelivery"
+            app:layout_constraintEnd_toStartOf="@id/btnBrowseOurShop"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnBrowseOurShop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/browse_our_shop"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/btnNewTradeCustomers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnNewTradeCustomers"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.35" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgShapeSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_shape_square"
+            app:layout_constraintEnd_toStartOf="@+id/imgShapeRectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtShapeSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/square"
+            android:textColor="@color/txt_grey"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toStartOf="@+id/imgShapeRectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgShapeSquare"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgShapeRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_shape_rectangle"
+            app:layout_constraintBottom_toBottomOf="@+id/imgShapeSquare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgShapeSquare"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtShapeRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/rectangle"
+            android:textColor="@color/txt_grey"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgShapeSquare"
+            app:layout_constraintTop_toBottomOf="@+id/imgShapeRectangle"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgShapeCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/img_shape_circle"
+            app:layout_constraintEnd_toStartOf="@+id/imgShapeTriangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShapeSquare"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtShapeCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/circle"
+            android:textColor="@color/txt_grey"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toStartOf="@+id/imgShapeTriangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgShapeCircle"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgShapeTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/img_shape_triangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgShapeCircle"
+            app:layout_constraintTop_toBottomOf="@+id/txtShapeSquare"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtShapeTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/triangle"
+            android:textColor="@color/txt_grey"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgShapeCircle"
+            app:layout_constraintTop_toBottomOf="@+id/imgShapeTriangle"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtWidthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/width_input"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtWidth"
+            app:layout_constraintEnd_toStartOf="@+id/guide"
+            app:layout_constraintTop_toTopOf="@+id/edtWidth"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtWidth"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_grey_line"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/txt_grey"
+            app:layout_constraintStart_toEndOf="@+id/guide"
+            app:layout_constraintTop_toBottomOf="@+id/txtShapeTriangle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLengthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/length_input"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtLength"
+            app:layout_constraintEnd_toStartOf="@+id/guide"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="@+id/edtLength"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtLength"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_grey_line"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+            android:maxLength="4"
+            android:inputType="number"
+            android:textColor="@color/txt_grey"
+            app:layout_constraintStart_toEndOf="@+id/guide"
+            app:layout_constraintTop_toBottomOf="@+id/edtWidth"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCalculateShape"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_green_rounded"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/calculate_shape"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLength"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtClearShape"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_green_line_rounded"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/clear_shape"
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalculateShape"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtShapeTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/bg_light_grey_rounded"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintTop_toBottomOf="@+id/txtClearShape"
+            tools:text="@string/shape_total"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+

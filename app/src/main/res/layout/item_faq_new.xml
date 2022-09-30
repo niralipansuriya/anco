@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_10sdp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/faq_que_bg"
+
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tvQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:drawablePadding="@dimen/_10sdp"
+                android:padding="@dimen/_12sdp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:drawableLeft="@drawable/ic_add_box"
+                android:textColor="@color/mdtp_white"
+                android:textSize="@dimen/_16sdp"
+                tools:text="What is e-scooter?"/>
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvAnswer"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/bg_faq_ans"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/faq_que_bg"
+                    android:textSize="@dimen/_14sdp"
+                    tools:text="E-Scooter is android app using this app you can ride scooter and you can make your heal"/>
+
+
+
+
+</LinearLayout>
+
+
+
+
+

@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_number": "591625719601",
+    "firebase_url": "https://ancob2b.firebaseio.com",
+    "project_id": "ancob2b",
+    "storage_bucket": "ancob2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591625719601:android:c4e3d314d4aef448f5ea10",
+        "android_client_info": {
+          "package_name": "com.app.ancoturf"
+        }
+      },
+     /* "client_info": {
+        "mobilesdk_app_id": "1:591625719601:android:c4e3d314d4aef448f5ea10",
+        "android_client_info": {
+          "package_name": "com.app.ancoturf.staging"
+        }
+      },*/
+      "oauth_client": [
+        {
+          "client_id": "591625719601-ivopnb8ih60g3278teapaasplm0iekim.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.ancoturf",
+            "certificate_hash": "37f8603ae81cff7b252f561d015affd3f19d8e5d"
+          }
+        },
+        {
+          "client_id": "591625719601-5voppbsvshn1ikf36nrotc0a32tpd5b8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoOSNerUQRAudePKiXupONvJ1Wmjvfskk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591625719601-5voppbsvshn1ikf36nrotc0a32tpd5b8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "591625719601-11186n5d4p7sg9522gpa4o12n7mfmh5n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ancoturf"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

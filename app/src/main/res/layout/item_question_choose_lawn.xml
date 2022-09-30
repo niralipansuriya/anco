@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivGuide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_width="0dp"
+        android:src="@drawable/ic_onboarding___retail___choosing_my_lawn"
+        android:layout_height="@dimen/_200sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:gravity="bottom|center"
+        android:fontFamily="@font/sf_pro_display_bold"
+        app:layout_constraintTop_toBottomOf="@id/ivGuide"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Is the lawn a full sun area?  "
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp"
+        />
+
+    <ImageView
+        android:id="@+id/ivInfo"
+        app:layout_constraintStart_toEndOf="@id/tvQuestion"
+        app:layout_constraintBottom_toBottomOf="@id/tvQuestion"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_anco_app___info_icon"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:gravity="bottom|center"
+        android:fontFamily="@font/sf_pro_text_regular"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/in_order_to_help_you_choose_the"
+        android:textColor="@color/rangebar_tick_color"
+        android:textSize="@dimen/_12ssp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

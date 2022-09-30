@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#528917</color>
+    <color name="theme_green">#528917</color>
+    <color name="light_green">#DCE7D0</color>
+    <color name="bottom_tab_color">#F6F6F6</color>
+    <color name="tab_divider_color">#E5E5E5</color>
+    <color name="grey">#8C8C8C</color>
+    <color name="txt_grey">#575F51</color>
+    <color name="light_grey">#9A9A9A</color>
+    <color name="rangebar_color">#E4E4E4</color>
+    <color name="rangebar_tick_color">#8C8C8C</color>
+    <color name="transparent_theme_green">#AB528917</color>
+    <color name="blue">#0000ff</color>
+    <color name="que_selected_green">#9BC66D</color>
+    <color name="que_deselected_green">#DBF0C3</color>
+    <color name="faq_que_bg">#7DAC5B</color>
+
+
+
+    <color name="red">#FF2920</color>
+    <color name="orange">#F2833C</color>
+    <color name="green">#00FA3A</color>
+    <color name="weather_top_home">#528818</color>
+    <color name="weather_bottom_home">#A8EB12</color>
+    <color name="weather_black_bg">#333333</color>
+
+
+</resources>

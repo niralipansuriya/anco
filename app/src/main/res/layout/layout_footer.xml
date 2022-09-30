@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/_2sdp"
+              android:background="@color/tab_divider_color"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_tab_color"
+                android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/bottom_tab_color"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:tint="@color/grey"
+                        android:src="@drawable/ic_home"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtHome"
+                        style="@style/footerTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_text_regular"
+                        android:text="@string/home_footer_tab"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linPayments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/bottom_tab_color"
+                    android:orientation="vertical"
+
+                    android:padding="@dimen/_2sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgPayments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_payments"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPayments"
+                        style="@style/footerTextView"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_text_regular"
+                        android:text="@string/payments_footer_tab"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/bottom_tab_color"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgContacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_contact" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtContacts"
+                        style="@style/footerTextView"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_text_regular"
+                        android:text="@string/contact_footer_tab"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@color/bottom_tab_color"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:tint="@color/grey"
+                        android:src="@drawable/ic_user"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtProfile"
+                        style="@style/footerTextView"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro_text_regular"
+                        android:text="@string/profile_footer_tab"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
+

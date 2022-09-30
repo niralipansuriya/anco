@@ -1,0 +1,128 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_12sdp">
+
+    <!-- <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/imgClose"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_marginEnd="@dimen/_8sdp"
+         android:src="@drawable/ic_close_dialog"/>-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/confirm_quote_title" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDropTurfDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="left"
+        android:padding="@dimen/_15sdp"
+        android:text="ssd fdngkd jgjfkg jkjhfg kgjhkggjjk jlgljgklj lk jlkgh jgjkl jkghljk k jhlkghjk  ghjgh j"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@drawable/bg_green"
+        android:fontFamily="@font/sf_pro_text_bold"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:text="@string/accept"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDropTurfDescription" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:gravity="center"
+        android:text="@string/decline"
+        android:textColor="@color/theme_green"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@id/txtConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtConfirm"
+        app:layout_constraintTop_toTopOf="@id/txtConfirm" />
+
+    <!--  <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/txtConfirm"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@+id/txtDropTurfDescription"
+           android:text="@string/accept"
+           android:textColor="@android:color/white"
+           android:textSize="@dimen/_16ssp"
+           android:background="@drawable/bg_green"
+           android:paddingTop="@dimen/_12sdp"
+           android:paddingBottom="@dimen/_12sdp"
+           android:foreground="?android:attr/selectableItemBackground"
+           android:layout_marginTop="@dimen/_8sdp"
+           android:layout_marginStart="@dimen/_8sdp"
+           android:layout_marginEnd="@dimen/_8sdp"
+           android:fontFamily="@font/sf_pro_text_bold"/>
+
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/txtCancel"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@+id/txtConfirm"
+           android:text="@string/decline"
+           android:textColor="@color/theme_green"
+           android:textSize="@dimen/_14ssp"
+           android:padding="@dimen/_8sdp"
+           android:foreground="?android:attr/selectableItemBackground"
+           android:fontFamily="@font/sf_pro_text_regular"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_marginLeft="@dimen/_25sdp"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingEnd="@dimen/_12sdp"
+    android:paddingBottom="@dimen/_20sdp">
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/imgClose"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginEnd="@dimen/_8sdp"
+      android:src="@drawable/ic_close_dialog"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/txtTitle"
+      android:layout_width="0dp"
+      android:gravity="center"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:text="@string/add_product_label"
+      android:textColor="@android:color/black"
+      android:textSize="@dimen/_22sdp"
+      android:fontFamily="@font/sf_pro_display_bold"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/txtSubTitle"
+      android:layout_width="0dp"
+      android:gravity="center"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:text="@string/add_a_custom_product"
+      android:textColor="@android:color/black"
+      android:textSize="@dimen/_13sdp"
+      android:fontFamily="@font/sf_pro_display_bold"/>
+
+  <View
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="2px"
+      android:background="@color/grey"
+      android:layout_marginTop="@dimen/_8sdp"
+      app:layout_constraintTop_toBottomOf="@+id/txtSubTitle"/>
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/nestedScroll"
+      android:layout_width="match_parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:fillViewport="true"
+      android:layout_marginTop="@dimen/_38sdp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/view"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="@dimen/_12sdp"
+          android:layout_marginBottom="@dimen/_12sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_quote_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp">
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/imgDeleteImage"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              android:visibility="gone"
+              android:src="@drawable/ic_close_dialog"/>
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/imgLogo"
+              android:layout_width="@dimen/_80sdp"
+              android:layout_height="@dimen/_80sdp"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginStart="@dimen/_28sdp"
+              android:layout_marginEnd="@dimen/_28sdp"
+              android:src="@drawable/img_place_holder"/>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/txtAddLogo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:gravity="center"
+              app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+              android:text="@string/add_image"
+              android:textColor="@android:color/black"
+              android:textSize="@dimen/_11ssp"
+              android:foreground="?android:attr/selectableItemBackground"
+              android:background="@drawable/bg_green_line_rounded"
+              android:paddingTop="@dimen/_8sdp"
+              android:paddingBottom="@dimen/_8sdp"
+              android:paddingStart="@dimen/_20sdp"
+              android:paddingEnd="@dimen/_20sdp"
+              android:layout_marginTop="@dimen/_4sdp"
+              android:fontFamily="@font/sf_pro_text_bold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtProductNameLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/layoutAddImage"
+            android:text="@string/name_label"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sf_pro_display_bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:background="@drawable/card_edittext_drawable"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductNameLabel"
+            android:hint="@string/custom_product_hint"
+            android:textColorHint="@color/grey"
+            android:textColor="@android:color/black"
+            android:singleLine="true"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtProductDescriptionLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/edtProductName"
+            android:text="@string/description"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sf_pro_text_bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtProductDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:background="@drawable/card_edittext_drawable"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductDescriptionLabel"
+            android:hint="@string/product_description_hint"
+            android:textColorHint="@color/grey"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:minLines="5"
+            android:maxLines="5"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtProductQuantityLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/edtProductDescription"
+            android:text="@string/quantity_label"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sf_pro_text_bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtProductQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:background="@drawable/card_edittext_drawable"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductQuantityLabel"
+            android:hint="0"
+            android:inputType="number"
+            android:textColorHint="@color/grey"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtProductPriceLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/edtProductQuantity"
+            android:text="@string/price_label"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sf_pro_text_bold"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtProductPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:background="@drawable/card_edittext_drawable"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductPriceLabel"
+            android:hint="$0.00"
+            android:maxLength="6"
+            android:textColorHint="@color/grey"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/edtProductPrice"
+            android:text="@string/confirm_and_add_to_quote"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12ssp"
+            android:background="@drawable/bg_green_rounded"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/sf_pro_text_bold"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/txtAddProduct"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_38sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/_12ssp"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/sf_pro_text_regular"/>
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

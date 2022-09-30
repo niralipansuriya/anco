@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<ImageView
+		android:id="@+id/imageViewBg"
+		android:scaleType="centerCrop"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		android:src="@drawable/bg_splash"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nestedScroll"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toTopOf="@+id/layoutFooterView"
+		android:fillViewport="true"
+		app:layout_constraintTop_toBottomOf="@+id/header"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/mainLayout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="@dimen/_16sdp">
+
+			<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/imgLogo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:src="@drawable/img_logo"
+				android:layout_marginTop="@dimen/_70sdp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtContactLabel"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/imgLogo"
+				tools:text="@string/contact_label"
+				android:layout_marginTop="@dimen/_8sdp"
+				android:textColor="@android:color/white"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_32ssp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtEmail"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtContactLabel"
+				tools:text="enquire@ancoturf.com.au"
+				android:layout_marginTop="@dimen/_4sdp"
+				android:textColor="@android:color/white"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_14ssp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtPhone"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtEmail"
+				tools:text="1800 010 110"
+				android:layout_marginTop="@dimen/_4sdp"
+				android:textColor="@android:color/white"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_14ssp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtAddress"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtPhone"
+				tools:text="200 Manks Road,"
+				android:textColor="@android:color/white"
+				android:layout_marginTop="@dimen/_4sdp"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_14ssp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtHoursLabel"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtAddress"
+				android:text="@string/operating_hours_label"
+				android:layout_marginTop="@dimen/_16sdp"
+				android:textColor="@android:color/white"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_17ssp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtSeparator"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtHoursLabel"
+				android:text="@string/separator"
+				android:textColor="@android:color/white"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_9ssp"/>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/txtOperatingHours"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtSeparator"
+				tools:text="Monday-Friday: 7:30am - 4:00pm"
+				android:layout_marginTop="@dimen/_4sdp"
+				android:textColor="@android:color/white"
+				android:fontFamily="@font/sf_pro_display_bold"
+				android:textSize="@dimen/_12ssp"/>
+
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/layoutCallNow"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/txtOperatingHours"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:foreground="?android:attr/selectableItemBackground"
+				android:background="@drawable/bg_green_rounded_corner"
+				android:layout_marginTop="@dimen/_12sdp"
+				android:padding="@dimen/_12sdp">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/txtCallNow"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					android:text="@string/call_now"
+					android:gravity="center"
+					android:textColor="@android:color/white"
+					android:fontFamily="@font/sf_pro_text_bold"
+					android:textSize="@dimen/_14ssp"/>
+
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/imgNext"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:layout_constraintStart_toEndOf="@+id/txtCallNow"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					android:src="@drawable/ic_next"
+					android:gravity="center"
+					android:textColor="@android:color/white"
+					android:fontFamily="@font/sf_pro_text_bold"
+					android:textSize="@dimen/_14ssp"/>
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+
+	<com.app.ancoturf.utils.customeview.FooterView
+		android:id="@+id/layoutFooterView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

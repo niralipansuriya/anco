@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/anco.iml" filepath="$PROJECT_DIR$/.idea/modules/anco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/anco.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/anco.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/anco.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/anco.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/anco.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/anco.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/anco.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/anco.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.iml" filepath="$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.main.iml" filepath="$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/materialrangebar/anco.materialrangebar.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="@dimen/_4sdp"
+    android:layout_height="wrap_content">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:fitsSystemWindows="true"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/_4sdp"
+        android:background="@drawable/bg_grey_line_rounded_corner"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgProductDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_close_dialog"
+        android:padding="@dimen/_4sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProductTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linQuantity"
+        app:layout_constraintStart_toEndOf="@+id/imgProduct"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Sir Walter DNA Certified"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:textSize="@dimen/_13ssp"
+        android:gravity="center"
+        android:paddingStart="@dimen/_32sdp"
+        android:paddingEnd="@dimen/_32sdp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgProduct"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtFinalPrize"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/product_qty"
+          android:textColor="@android:color/black"
+          android:fontFamily="@font/sf_pro_display_medium"
+          android:textSize="@dimen/_13ssp"
+          android:layout_marginStart="@dimen/_6sdp"
+          android:gravity="center"/>
+
+      <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/edtQuantity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_rect_edit_white"
+          android:paddingStart="@dimen/_12sdp"
+          android:paddingEnd="@dimen/_12sdp"
+          android:paddingTop="@dimen/_6sdp"
+          android:paddingBottom="@dimen/_6sdp"
+          android:inputType="number"
+          android:text="1"
+          android:maxLength="5"
+          android:textColor="@android:color/black"
+          android:fontFamily="@font/sf_pro_display_regular"
+          android:textSize="@dimen/_13ssp"
+          android:singleLine="true"
+          android:layout_marginStart="@dimen/_4sdp"
+          android:gravity="center"/>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtUnit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="m"
+          android:layout_marginStart="@dimen/_4sdp"
+          android:textColor="@android:color/black"
+          android:fontFamily="@font/sf_pro_display_medium"
+          android:textSize="@dimen/_13ssp"
+          android:gravity="center"/>
+
+
+    </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

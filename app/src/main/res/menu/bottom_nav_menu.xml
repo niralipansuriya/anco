@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:title="HOME" android:icon="@drawable/ic_home_black_24dp" android:id="@+id/navigation_home"/>
+
+	<item android:title="PAYMENTS" android:icon="@drawable/ic_dashboard_black_24dp" android:id="@+id/navigation_payments"/>
+
+	<item android:title="CONTACTS" android:icon="@drawable/ic_notifications_black_24dp" android:id="@+id/navigation_contacts"/>
+
+	<item android:title="PROFILE" android:icon="@drawable/ic_notifications_black_24dp" android:id="@+id/navigation_profile"/>
+
+</menu>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgProductDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ic_close_dialog"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFinalPrice"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProductTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgProduct"
+        app:layout_constraintEnd_toStartOf="@+id/edtQuantity"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/imgProduct"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sir fvgdf vgnhghghnghngfhnbgfhnbgfhngnhg" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:gravity="center"
+        android:text="m"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toTopOf="@+id/edtQuantity"
+        app:layout_constraintEnd_toEndOf="@+id/edtQuantity"
+        app:layout_constraintStart_toStartOf="@+id/edtQuantity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtQuantity"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="@drawable/bg_green_line_rounded_corner"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="4"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:singleLine="true"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtFinalPrice"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/txtProductTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtUnit" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFinalPrice"
+        android:layout_width="@dimen/_77sdp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_2sdp"
+        android:text="@string/quote_price"
+        android:textColor="@color/theme_green"
+        android:autoSizeTextType="uniform"
+        tools:text="$780"
+        android:maxLines="1"
+        android:autoSizeMaxTextSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintTop_toTopOf="@+id/edtQuantity" />
+    <!--    android:autoSizeMaxTextSize="@dimen/_14ssp"-->
+    <!--    android:autoSizeMinTextSize="@dimen/_2ssp"-->
+    <!--    android:autoSizeStepGranularity="@dimen/_1ssp"-->
+    <!--    android:autoSizeTextType="uniform"-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/imgProduct" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

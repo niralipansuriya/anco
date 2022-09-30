@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.welcomeOnBoard.WelcomeOnBoardActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeaderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/welcome_to_the_nanco_app"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_22sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeaderLabel">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/pageIndicatorViewModen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.app.ancoturf.utils.customeview.pagerindicator.CirclePageIndicator
+                android:id="@+id/pageIndicatorViewModen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/_15sdp"
+                android:visibility="visible"
+                app:fillColor="@color/theme_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:pageColor="#D8D8D8"
+                app:radius="@dimen/_3sdp"
+                app:strokeColor="#000000"
+                app:strokeWidth="0dp" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_green_rounded"
+                android:fontFamily="@font/sf_pro_text_bold"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="visible"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/chkDontask"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <CheckBox
+                android:id="@+id/chkDontask"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:buttonTint="@color/rangebar_tick_color"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:text="@string/do_not_show_again"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textColor="@color/rangebar_tick_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                 />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

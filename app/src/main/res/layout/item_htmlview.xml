@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingTop="@dimen/_12sdp">
+
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/txtTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@+id/header"
+			tools:text="Sir Walter DNACertified"
+			android:textColor="@android:color/black"
+			android:textSize="@dimen/_12sdp"
+			android:paddingLeft="@dimen/_5sdp"
+			android:drawableEnd="@drawable/ic_down_arrow"
+			android:layout_marginStart="@dimen/_8sdp"
+			android:layout_marginEnd="@dimen/_8sdp"
+			android:fontFamily="@font/sf_pro_text_bold"/>
+
+	<WebView
+			android:id="@+id/txtHtml"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/sf_pro_text_regular"
+			android:textSize="@dimen/_12sdp"
+			android:layout_marginStart="@dimen/_8sdp"
+			android:layout_marginEnd="@dimen/_8sdp"
+			android:textColor="@android:color/black"
+			android:visibility="visible"
+			app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+			android:layout_marginTop="@dimen/_4sdp"/>
+
+		<View
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_1sdp"
+				android:background="#B6B6B6"
+				app:layout_goneMarginTop="@dimen/_8sdp"
+				app:layout_constraintTop_toBottomOf="@+id/txtHtml"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

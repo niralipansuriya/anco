@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBenefit"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBenefitTitle"
+        android:src="@drawable/img_tumblr"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBenefitTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="Low Maintenance Lawn"
+        android:fontFamily="@font/sf_pro_text_medium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_13ssp"
+        android:minLines="3"
+        android:gravity="center_vertical|start"
+        app:layout_constraintStart_toEndOf="@+id/imgBenefit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout"
+        android:padding="@dimen/_8sdp">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_item_products"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/linImageProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_120sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_item_lawn_tips"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtProductTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/linImageProduct"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/bg_products_title"
+                    android:text="TilTuf Bermuda Turf"
+                    android:fontFamily="@font/arial_regular"
+                    android:textColor="@android:color/white"
+                    android:padding="@dimen/_4sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:gravity="center"/>
+
+            <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="2px"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProductTitle"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@color/grey"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPrize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="$13.75 per m"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textColor="@color/txt_grey"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:gravity="center"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFreeDescription"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPrize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text=""
+                    android:padding="@dimen/_5sdp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_9ssp"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/linPrizeCalculation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/txtFreeDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="m"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/txt_grey"
+                        android:textSize="@dimen/_9ssp"
+                        android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rect_edit_white"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/txt_grey"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        android:text="1"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:textSize="@dimen/_9ssp"
+                        android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtFinalPrize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_total_price"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textColor="@color/txt_grey"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:textSize="@dimen/_9ssp"
+                        android:gravity="center"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCalculationLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/linPrizeCalculation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/calculation_label_text"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textColor="@color/theme_green"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAddToCart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCalculationLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/bg_green_rounded_corner"
+                    android:text="@string/add_to_cart"
+                    android:fontFamily="@font/sf_pro_text_semibold"
+                    android:textColor="@android:color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:gravity="center"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

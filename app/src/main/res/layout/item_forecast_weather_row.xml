@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_10sdp"
+    tools:background="@android:color/black">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDays"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:text="Wednesday"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@id/ivWeatherRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivWeatherRow" />
+
+    <ImageView
+        android:id="@+id/ivWeatherRow"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:src="@drawable/back_icon_weather"
+        app:layout_constraintBottom_toBottomOf="@id/tvDays"
+        app:layout_constraintStart_toEndOf="@id/tvDays"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWeatherType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:lines="2"
+        android:maxLines="2"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:text="Mostly Sunny"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/ivWeatherRow"
+        app:layout_constraintEnd_toStartOf="@id/tvDayTempreture"
+        app:layout_constraintStart_toEndOf="@id/ivWeatherRow"
+        app:layout_constraintTop_toTopOf="@id/ivWeatherRow" />
+
+  <!--  <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWeatherType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:text="Mostly Sunny"
+        android:textColor="@android:color/white"
+        app:autoSizeMaxTextSize="@dimen/_16ssp"
+        app:autoSizeMinTextSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/ivWeatherRow"
+        app:layout_constraintEnd_toStartOf="@id/tvDayTempreture"
+        app:layout_constraintStart_toEndOf="@id/ivWeatherRow"
+        app:layout_constraintTop_toTopOf="@id/ivWeatherRow" />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNightTempreture"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="24\u00B0"
+        android:textColor="@color/weather_bottom_home"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@id/ivWeatherRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivWeatherRow" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDayTempreture"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:text="32\u00B0"
+        android:textColor="@android:color/white"
+
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@id/ivWeatherRow"
+        app:layout_constraintEnd_toStartOf="@id/tvNightTempreture"
+        app:layout_constraintTop_toTopOf="@id/ivWeatherRow" />
+
+    <View
+        android:id="@+id/lineWeather"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivWeatherRow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_8sdp"
+    android:scrollbars="horizontal">-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBillIssuedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:gravity="start"
+        android:text="Bill Issued"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toStartOf="@+id/txtBillNumberLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBillIssued"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="start"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/txtBillIssuedLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtBillIssuedLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtBillIssuedLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBillNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Bill Number"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toStartOf="@+id/txtAmountLabel"
+        app:layout_constraintStart_toEndOf="@+id/txtBillIssuedLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBillNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="start"
+        android:singleLine="false"
+        android:text="#12458"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@+id/txtBillNumberLabel"
+        app:layout_constraintStart_toStartOf="@+id/txtBillNumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtBillNumberLabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAmountLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Amount"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@+id/txtAmount"
+        app:layout_constraintStart_toStartOf="@+id/txtAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAmount"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="start"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/txtDueDate"
+        app:layout_constraintStart_toEndOf="@+id/txtBillNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmountLabel"
+        tools:text="$ 7,820.00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDueDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="Due/Paid"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAmountLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDueDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="start"
+        android:maxLines="1"
+        android:singleLine="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12ssp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtDueDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtDueDateLabel"
+        tools:text="21 May 2020" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--</HorizontalScrollView>-->

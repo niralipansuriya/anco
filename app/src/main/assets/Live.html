@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <title>PayWay Trusted Frame Example Code</title>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body>
+    <div class="paywaypage">
+    <!-- <h1>PayWay Trusted Frame Example</h1> -->
+
+    <div id="payway-credit-card">
+    </div>
+
+    <br/>
+
+    <button id="pay" disabled class="btn btn-success" style="margin:10px 10px 10px 100px">Pay</button>
+    <div class="text-danger"></div>
+    <p class="help-block"></p>
+    <input type="hidden" name="singleUseTokenId" value="" id="singleUseTokenId">
+
+    <script src="https://api.payway.com.au/rest/v1/payway.js">
+    </script>
+
+    <script>
+      "use strict";
+      const payButton = document.getElementById( "pay" );
+      let creditCardFrame = null;
+
+      const tokenCallback = function( err, data ) {
+        if ( err ) {
+          console.error( "Error getting token: " + err.message );
+          alert("Error: " + err.message);
+        } else {
+            console.log(data.creditCard);
+            console.log( "singleUseTokenId: " + data.singleUseTokenId );
+          alert("Token: " + JSON.stringify(data.singleUseTokenId));
+        }
+        creditCardFrame.destroy();
+        creditCardFrame = null;
+      };
+
+      payButton.onclick = function() {
+        payButton.disabled = true;
+        creditCardFrame.getToken( tokenCallback );
+      };
+
+      const createdCallback = function( err, frame ) {
+        if ( err ) {
+          console.error( "Error creating frame: " + err.message );
+        } else {
+          // Save the created frame for when we get the token
+          creditCardFrame = frame;
+        }
+      };
+
+      const options = {
+        // TODO: Replace {publishableApiKey} with your key
+        publishableApiKey: 'Q26891_PUB_qcep85d3jace9e7ptgj7jx23zmefzzmdhqp9nxwcindmzgbw6ta9k8rgu8kn',
+        tokenMode: "callback",
+        onValid: function() { payButton.disabled = false; },
+        onInvalid: function() { payButton.disabled = true; }
+      };
+      payway.createCreditCardFrame( options, createdCallback );
+    </script>
+    </div>
+  </body>
+</html>   
